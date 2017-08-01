@@ -17,13 +17,13 @@ public class ActivityModule {
 
     @Provides
     @PerActivity
-    BaseActivity provideActivity() {
+    public BaseActivity provideActivity() {
         return this.activity;
     }
 
     @Provides
     @PerActivity
-    ActCollaborator provideActCollaborator() {
+    public ActCollaborator provideActCollaborator() {
         return new ActCollaborator();
     }
 }

@@ -1,9 +1,10 @@
 package com.paradigmadigital.dagger.platform;
 
+import android.app.Application;
+import android.support.annotation.VisibleForTesting;
+
 import com.paradigmadigital.dagger.di.ApplicationComponent;
 import com.paradigmadigital.dagger.di.DaggerApplicationComponent;
-
-import android.app.Application;
 
 public class AndroidApplication extends Application {
 
@@ -17,5 +18,10 @@ public class AndroidApplication extends Application {
         return DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))
                 .build();
+    }
+
+    @VisibleForTesting
+    public void setApplicationComponent(ApplicationComponent applicationComponent) {
+        this.applicationComponent = applicationComponent;
     }
 }

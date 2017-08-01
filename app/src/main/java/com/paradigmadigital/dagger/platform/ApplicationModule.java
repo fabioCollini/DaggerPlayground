@@ -1,9 +1,9 @@
 package com.paradigmadigital.dagger.platform;
 
+import android.content.Context;
+
 import com.paradigmadigital.dagger.ui.AppCollaborator;
 import com.paradigmadigital.dagger.ui.IAppCollaborator;
-
-import android.content.Context;
 
 import javax.inject.Singleton;
 
@@ -19,13 +19,13 @@ public class ApplicationModule {
     }
 
     @Provides
-    Context provideContext() {
+    public Context provideContext() {
         return this.application;
     }
 
     @Provides
     @Singleton
-    IAppCollaborator provideAppCollaborator() {
+    public IAppCollaborator provideAppCollaborator() {
         return new AppCollaborator();
     }
 }
