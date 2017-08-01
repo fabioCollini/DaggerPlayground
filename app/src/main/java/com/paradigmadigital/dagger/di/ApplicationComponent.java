@@ -18,6 +18,8 @@ public interface ApplicationComponent {
 
     @Component.Builder
     interface Builder {
+        Builder applicationModule(ApplicationModule applicationModule);
+
         @BindsInstance
         Builder application(AndroidApplication application);
 
