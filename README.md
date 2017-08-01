@@ -23,14 +23,14 @@ Using a custom instrumentation runner and extending AndroidApplication and Appli
 
 ## Exercises
 
-####1- Open tha app, navigate to detail, another and check the logs: 
+#### 1- Open tha app, navigate to detail, another and check the logs: 
 - Context and AppCollaborator share the same instance in Navigator logs, why?
 - Activity and ActCollaborator are different instances in Navigator logs, why?
 - ActCollaborator share the same instance between DetailPresenter and the second Navigator log, why?
 
-####2- In `ApplicationModule` comment out the `Singleton` annotation from `AppCollaborator` and run again: 
+#### 2- In `ApplicationModule` comment out the `Singleton` annotation from `AppCollaborator` and run again: 
 - AppCollaborator is no longer the same instance, why?
 
-####3- In `ApplicationModule` set back the `Singleton` annotation to `AppCollaborator`. Now in `ApplicationComponent` comment out the `AppColaborator provideAppCollaborator();` line  and run again: 
+#### 3- In `ApplicationModule` set back the `Singleton` annotation to `AppCollaborator`. Now in `ApplicationComponent` comment out the `AppColaborator provideAppCollaborator();` line  and run again: 
 - AppCollaborator is no longer the same instance, why?
 
